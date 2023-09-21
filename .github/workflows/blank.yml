@@ -130,7 +130,16 @@ jobs:
         shell: bash
         working-directory: /home/runner/work/TestGithubActions/TestGithubActions
         run: ls
-
+        
+      - name: Test git clone and run
+        if: always()
+        shell: bash
+        working-directory: /home/runner/work/TestGithubActions/TestGithubActions
+        run: |
+          git clone https://github.com/Audice/ScriptsForTest.git
+          cd ScriptsForTest/
+          python3 testscript.py
+        
       - name: Install Strip
         shell: bash
         run: cmake --install . --strip
