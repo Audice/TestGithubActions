@@ -21,6 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        python-version: ["3.11"]
         config: 
         - {
             name: "Ubuntu_Latest_GCC",
@@ -91,7 +92,17 @@ jobs:
           sudo update-alternatives --install /usr/bin/cmake cmake /opt/cmake/bin/cmake 1 --force
           echo cmake version after
           cmake --version
-          
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Test with pytest
+        shell: bash
+        working-directory: /home/runner/work/TestGithubActions/TestGithubActions
+        run: python3 test_script.py
+        
       - name: Configure
         shell: bash
         run: |
