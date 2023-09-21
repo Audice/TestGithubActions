@@ -140,7 +140,7 @@ jobs:
         shell: bash
         working-directory: /home/runner/work/TestGithubActions/TestGithubActions
         run: |
-          git clone https://github.com/Audice/ScriptsForTest.git
+          git clone https://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@github.com/Audice/ScriptsForTest.git
           cd ScriptsForTest/
           python3 testscript.py
         
