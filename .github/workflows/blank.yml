@@ -125,6 +125,12 @@ jobs:
         working-directory: /home/runner/work/TestGithubActions/TestGithubActions
         run: ./main
 
+      - name: See build 2
+        if: always()
+        shell: bash
+        working-directory: /home/runner/work/TestGithubActions/TestGithubActions
+        run: ls
+
       - name: Install Strip
         shell: bash
         run: cmake --install . --strip
