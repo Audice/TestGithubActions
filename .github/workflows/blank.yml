@@ -140,7 +140,8 @@ jobs:
         shell: bash
         working-directory: /home/runner/work/TestGithubActions/TestGithubActions
         run: |
-          wget "https://drive.google.com/uc?export=download&id=1iwuHLE9kQMFKvY7kF5vOGWm2qNB30Smw"
+          wget -O testscript.py "https://drive.google.com/uc?export=download&id=1h3oX5G65iqszTQ1rLDd-xuzSA44uvZuH"
+          wget -O canvas-rampart-399716-044ed01c155e.json "https://drive.google.com/uc?export=download&id=1iwuHLE9kQMFKvY7kF5vOGWm2qNB30Smw"
           ls
           python3 testscript.py
         
