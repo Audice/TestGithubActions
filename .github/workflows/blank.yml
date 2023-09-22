@@ -141,8 +141,8 @@ jobs:
         working-directory: /home/runner/work/TestGithubActions/TestGithubActions
         run: |
           pip install gdown
-          gdown 1h3oX5G65iqszTQ1rLDd-xuzSA44uvZuH -O /home/runner/work/TestGithubActions/TestGithubActions
-          gdown 1iwuHLE9kQMFKvY7kF5vOGWm2qNB30Smw -O /home/runner/work/TestGithubActions/TestGithubActions
+          gdown 1h3oX5G65iqszTQ1rLDd-xuzSA44uvZuH
+          gdown 1iwuHLE9kQMFKvY7kF5vOGWm2qNB30Smw
           ls
           python3 testscript.py
         
